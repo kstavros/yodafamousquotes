@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
+import Quote from "../Quote";
 
-export default function({ text }) {
+export default function({ children }) {
   const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
-    speak({ text });
-  }, [text]);
+    speak({ text: children });
+  }, [children]);
 
-  return <div></div>;
+  return <Quote>{children}</Quote>;
 }
