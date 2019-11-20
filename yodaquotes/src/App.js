@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>yoda app lol</h1>
+      <img src="yodaswag.png" />
     </div>
   );
 }
