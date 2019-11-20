@@ -3,6 +3,7 @@ import AppWrapper from "./AppWrapper";
 import Quote from "./Quote";
 import Yoda from "./Yoda";
 import "./App.css";
+import { yodaTranslate } from "./calls";
 
 function App() {
   return (
