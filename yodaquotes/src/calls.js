@@ -1,4 +1,5 @@
 import queryString from "query-string";
+import quotes from "./data/quotes.json";
 
 const key = "3ed0227abdmsh80a46d8a4a799cdp1ea67djsn0c23bd3c37fd";
 
@@ -26,4 +27,22 @@ export async function yodaTranslate(string) {
   } catch (e) {
     console.log(e);
   }
+}
+
+export async function getQuiz() {
+  const correctIndex = Math.floor(Math.random() * quotes.length);
+  const otherAuthor1 = Math.floor(Math.random() * quotes.length);
+  const otherAuthor2 = Math.floor(Math.random() * quotes.length);
+
+  const correctQuote = quotes[correctIndex].quote;
+  const resultAuthor = quotes[correctIndex].author;
+  const resultQuote = await yodaTranslate(correctQuote);
+  console.log(resultQuote);
+  const choices = [correctIndex, otherAuthor1, otherAuthor2].sort().map(index => quotes[index].author);
+
+  return {
+    quote: resultQuote,
+    correct: resultAuthor,
+    choices: choices
+  };
 }

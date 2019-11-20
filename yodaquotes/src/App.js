@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppWrapper from "./AppWrapper";
 import Quote from "./Quote";
 import Yoda from "./Yoda";
 import "./App.css";
-import { yodaTranslate } from "./calls";
+import { yodaTranslate, getQuiz } from "./calls";
 
 function App() {
+  useEffect(async () => {
+    //const result = await getQuiz();
+    //console.log(result);
+  }, []);
   return (
     <AppWrapper>
       <div className="App" style={{ padding: "0" }}>
