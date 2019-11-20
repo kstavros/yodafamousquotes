@@ -7,7 +7,9 @@ function Quote({ children }) {
         display: "flex",
         alignItems: "center",
         flexDirection: "row",
-        justifyContent: "center"
+        justifyContent: "center",
+        margin: "24px",
+        height: "200px"
       }}
     >
       {children}
