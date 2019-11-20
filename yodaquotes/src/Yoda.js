@@ -1,7 +1,11 @@
 import React from "react";
 
-function Yoda({ children }) {
-  return <div>{children}</div>;
+function Yoda() {
+  return (
+    <div>
+      <img src="yodaswag.png" />
+    </div>
+  );
 }
 
 export default Yoda;
