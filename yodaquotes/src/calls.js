@@ -1,7 +1,7 @@
 import queryString from "query-string";
 import quotes from "./data/quotes.json";
 
-const key = "95479cdd10msh19a9768602e6420p1eb996jsn9af2770b3ba4";
+const key = "3ed0227abdmsh80a46d8a4a799cdp1ea67djsn0c23bd3c37fd";
 
 const headers = {
   "x-rapidapi-host": "yodish.p.rapidapi.com",
